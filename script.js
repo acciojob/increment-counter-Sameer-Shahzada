@@ -1,35 +1,16 @@
-//your JS code here. If required.
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Increment Counter</title>
-</head>
-<body>
+let count = 0;
 
-  <!-- Counter -->
-  <p id="counter">0</p>
+const counter = document.getElementById("counter");
+const button = document.getElementById("incrementBtn");
 
-  <!-- Increment Button -->
-  <button id="incrementBtn">Increment</button>
+button.addEventListener("click", function () {
 
-  <script>
-    let count = 0;
+  // Alert un-incremented value
+  alert(count);
 
-    const counter = document.getElementById("counter");
-    const button = document.getElementById("incrementBtn");
+  // Increment value
+  count++;
 
-    button.addEventListener("click", function () {
-
-      // Alert un-incremented value
-      alert(count);
-
-      // Increment count
-      count++;
-
-      // Update UI
-      counter.textContent = count;
-    });
-  </script>
-
-</body>
-</html>
+  // Update counter
+  counter.textContent = count;
+});
